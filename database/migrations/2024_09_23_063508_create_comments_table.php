@@ -18,6 +18,15 @@ return new class extends Migration
             $table->text('content');
             $table->timestamps();
         });
+
+        /*Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('post_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Ensure this line is present
+            $table->text('content');
+            $table->timestamps();
+        });*/
+        
         
     }
 

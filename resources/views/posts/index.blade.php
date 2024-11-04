@@ -1,5 +1,10 @@
 @extends('layouts.master')
 @section('content')
+@if(session('message'))
+    <div class="alert alert-info">
+        {{ session('message') }}
+    </div>
+@endif
 
 <div class="container p-4"> <!-- Added padding here -->
     <form action="{{ route('posts.store') }}" method="POST" class="mb-4">
@@ -29,12 +34,16 @@
                     @csrf
                     <button type="submit" class="btn btn-outline-primary">Like ({{ $post->likes->count() }})</button>
                 </form>
-
-                <h6 class="mt-4">Comments:</h6>
-                @foreach ($post->comments as $comment)
-                    <p>{{ $comment->content }} - <small>by {{ $comment->user->name }}</small></p>
-                @endforeach
-
+                <h3>Comments:</h3>
+@if($post->comments->isEmpty())
+    <p>No comments yet.</p>
+@else
+    @foreach($post->comments as $comment)
+        <div>
+            <strong>{{ $comment->user->name }}:</strong> {{ $comment->content }}
+        </div>
+    @endforeach
+@endif
                 <form action="{{ route('posts.comment', $post->id) }}" method="POST">
                     @csrf
                     <textarea name="content" class="form-control mb-2" required></textarea>
