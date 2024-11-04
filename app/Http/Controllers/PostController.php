@@ -10,7 +10,9 @@ use App\Models\Comment;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::with(['user', 'comments', 'likes'])->get();
+        //$posts = Post::with(['user', 'comments', 'likes'])->get();
+        $posts = Post::with(['comments.user', 'user', 'likes'])->get();
+
         return view('posts.index', compact('posts'));
     }
 

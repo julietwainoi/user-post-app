@@ -22,6 +22,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $post->title }}</h5>
                 <p class="card-text">{{ $post->content }}</p>
+                
                 <p class="text-muted">Posted by: {{ $post->user->name }}</p>
 
                 <form action="{{ route('posts.like', $post->id) }}" method="POST">
