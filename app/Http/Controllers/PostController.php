@@ -49,22 +49,24 @@ class PostController extends Controller
       //dd($request->content); 
         $post = Post::findOrFail($id);
 
+        if ($post->comments()->where('user_id', auth()->id())->exists()) {
+            $post->comments()->create([
+            'user_id' => auth()->id(),
+            'content' => $request->content,
+       ]);
+        }
+
+        return back();
+       //try {
         //$post->comments()->create([
             //'user_id' => auth()->id(),
             //'content' => $request->content,
        // ]);
+       // dd(auth()->id(), $request->content);
 
-       // return back();
-       try {
-        $post->comments()->create([
-            'user_id' => auth()->id(),
-            'content' => $request->content,
-        ]);
-        dd(auth()->id(), $request->content);
-
-    } catch (\Exception $e) {
-        return response()->json(['error' => 'Comment could not be added: ' . $e->getMessage()], 500);
-    }
+    //} catch (\Exception $e) {
+       // return response()->json(['error' => 'Comment could not be added: ' . $e->getMessage()], 500);
+    
 
 
 
