@@ -41,17 +41,17 @@
                   <a href="{{route('posts.index')}}" class="nav-link">
                       <i class="nav-icon fas fa-tachometer-alt"></i>
                       <p>
-                         Dashboard
+                         POSTS
                           <i class="right fas fa-angle-right"></i>
                       </p>
                   </a>
               </li>
-     
+             
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('profile.edit')}}" class="nav-link">
                       <i class="nav-icon fa fa-list-alt"></i>
                         <p>
-                            Leave Requests
+                         Account Details
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
