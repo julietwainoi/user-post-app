@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PersonalDetailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,13 @@ Route::middleware(['auth'])->group(function () {
     //Route::post('/posts/{id}/comment', [PostController::class, 'comment'])->name('posts.comment');
     Route::post('posts/{id}/comment', [PostController::class, 'comment'])->name('posts.comment');
 });
+Route::middleware('auth')->group(function () {
+    Route::resource('personal-details', PersonalDetailController::class);
+    Route::resource('educations', EducationController::class);
+    Route::resource('work-experiences', WorkExperienceController::class);
+    Route::resource('github-repositories', GithubRepositoryController::class);
+});
+
 
 
 require __DIR__.'/auth.php';

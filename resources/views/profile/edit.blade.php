@@ -10,8 +10,8 @@
 
 <div class="container py-5">
     <!-- Header Section -->
-    <header class="mb-4">
-        <h2 class="font-weight-bold text-dark">
+    <header class="mb-4 text-center">
+        <h2 class="font-weight-bold text-dark ">
             Profile
         </h2>
     </header>

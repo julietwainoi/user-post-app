@@ -61,7 +61,7 @@
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Leave Application
+                      
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
@@ -70,7 +70,7 @@
                     <a href="" class="nav-link">
                         <i class="nav-icon fa fa-list-alt"></i>
                         <p>
-                            Leaves History
+                          
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
@@ -80,7 +80,7 @@
             <a href="" class="nav-link">
                 <i class="nav-icon fa fa-window-restore"></i>
                 <p>
-                    Leave Assignment 
+                
                     <i class="right fas fa-angle-right"></i>
                 </p>
             </a>
@@ -90,7 +90,7 @@
                     <a href="" class="nav-link">
                         <i class="nav-icon fa fa-envelope-open"></i>
                         <p>
-                          Register User
+                         
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
@@ -100,7 +100,7 @@
                   <a href="" class="nav-link">
                       <i class="nav-icon fa fa-envelope-open"></i>
                       <p>
-                       Create Department
+                      
                           <i class="right fas fa-angle-right"></i>
                       </p>
                   </a>
@@ -111,7 +111,7 @@
                     <a href="" class="nav-link">
                         <i class="nav-icon fa fa-cog"></i>
                         <p>
-                            Setup
+                            
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
@@ -121,7 +121,7 @@
                   <a href="" class="nav-link">
                       <i class="nav-icon fa fa-cog"></i>
                       <p>
-                        createRoles
+                      
                           <i class="right fas fa-angle-right"></i>
                       </p>
                   </a>
@@ -131,7 +131,7 @@
                   <a href="" class="nav-link">
                       <i class="nav-icon fa fa-cog"></i>
                       <p>
-                        AssignRole
+                        
                           <i class="right fas fa-angle-right"></i>
                       </p>
                   </a>
@@ -141,7 +141,7 @@
                 <a href="" class="nav-link">
                     <i class="nav-icon fa fa-cog"></i>
                     <p>
-                     supervisorDshboard
+                    
                         <i class="right fas fa-angle-right"></i>
                     </p>
                 </a>
