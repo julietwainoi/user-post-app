@@ -23,6 +23,28 @@ class User extends Authenticatable
     public function likes() {
         return $this->hasMany(Like::class);
     }
+  
+    // User.php
+
+public function personalDetail()
+{
+    return $this->hasOne(PersonalDetail::class);
+}
+
+public function educations()
+{
+    return $this->hasMany(Education::class);
+}
+
+public function workExperiences()
+{
+    return $this->hasMany(WorkExperience::class);
+}
+
+public function githubRepositories()
+{
+    return $this->hasMany(GithubRepository::class);
+}
 
 
 

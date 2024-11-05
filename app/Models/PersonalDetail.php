@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class PersonalDetail extends Model
 {
     use HasFactory;
+    // PersonalDetail.php, Education.php, WorkExperience.php, and GithubRepository.php
+
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 }
