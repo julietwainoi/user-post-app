@@ -29,19 +29,19 @@
         <!-- Name -->
         <div class="mb-3">
             <label for="degree" class="form-label">Degree</label>
-            <input type="text" name="degree" id="degree" class="form-control" value="{{ old('degree', $educations->degree) }}" required>
+            <input type="text" name="degree" id="degree" class="form-control" value="{{ old('degree', $education->degree) }}" required>
         </div>
 
         <!-- Bio -->
         <div class="mb-3">
             <label for="institution" class="form-label">Institution</label>
-            <textarea name="institution" id="institution" class="form-control" rows="3">{{ old('institution', $educations->institution) }}</textarea>
+            <textarea name="institution" id="institution" class="form-control" rows="3">{{ old('institution', $education->institution) }}</textarea>
         </div>
 
         <!-- Location -->
         <div class="mb-3">
             <label for="year_of_graduation" class="form-label">year_of_graduation</label>
-            <input type="text" name="year_of_graduation" id="year_of_graduation" class="form-control" value="{{ old('year_of_graduation', $educations->year_of_graduation) }}">
+            <input type="text" name="year_of_graduation" id="year_of_graduation" class="form-control" value="{{ old('year_of_graduation', $education->year_of_graduation) }}">
         </div>
 
         <!-- Submit Button -->

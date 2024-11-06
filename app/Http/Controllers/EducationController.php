@@ -69,7 +69,7 @@ class EducationController extends Controller
             'year_of_graduation' => 'nullable|string|max:255',
         ]);
     
-        $educations()->update($request->only(['degree', 'institution', 'year_of_graduation']));
+        $education->update($request->only(['degree', 'institution', 'year_of_graduation']));
     
         return redirect()->route('educations.index')->with('success', 'Education details added successfully.');
     }
