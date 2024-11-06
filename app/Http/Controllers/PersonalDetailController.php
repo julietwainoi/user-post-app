@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PersonalDetail; 
 use Illuminate\Http\Request;
 
 class PersonalDetailController extends Controller
@@ -52,6 +53,7 @@ class PersonalDetailController extends Controller
      */
     public function edit(PersonalDetail $personalDetail)
 {
+    //dd($personalDetail); 
     return view('profile.personal-details.edit', compact('personalDetail'));
 }
 

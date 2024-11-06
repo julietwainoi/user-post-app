@@ -79,7 +79,10 @@ public function githubRepositories()
         'password' => 'hashed',
     ];
 
-
+    /*public function getRouteKeyName(): string
+    {
+        return 'uuid';
+    }*/
 
     
 }
