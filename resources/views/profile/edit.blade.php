@@ -12,7 +12,7 @@
     <!-- Header Section -->
     <header class="mb-4 text-center">
         <h2 class="font-weight-bold text-dark ">
-            Profile
+            Account Details
         </h2>
     </header>
 

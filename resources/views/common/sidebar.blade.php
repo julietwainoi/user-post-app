@@ -3,7 +3,7 @@
     <a href="" class="brand-link">
         <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8"> -->
-        <span class="brand-text font-weight-light">HRM</span>
+        <span class="brand-text font-weight-light">User-post</span>
     </a>
 
     <!-- Sidebar -->
@@ -51,7 +51,7 @@
                     <a href="{{route('profile.edit')}}" class="nav-link">
                       <i class="nav-icon fa fa-list-alt"></i>
                         <p>
-                         Account Details
+                         Edit Account Details
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
