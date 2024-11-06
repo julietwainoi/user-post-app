@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PersonalDetailController;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\WorkExperienceController;
+use App\Http\Controllers\GithubRepositoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
