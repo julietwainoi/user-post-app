@@ -58,95 +58,35 @@
                 </li>
               
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('github-repositories.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                      
+                        github-repositories
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('personal-details.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-list-alt"></i>
                         <p>
-                          
+                        personal-details
                             <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
                 </li>
-
+        
         <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('educations.index')}}" class="nav-link">
                 <i class="nav-icon fa fa-window-restore"></i>
                 <p>
-                
+                educations
                     <i class="right fas fa-angle-right"></i>
                 </p>
             </a>
         </li>
    
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fa fa-envelope-open"></i>
-                        <p>
-                         
-                            <i class="right fas fa-angle-right"></i>
-                        </p>
-                    </a>
-                </li>
-         
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                      <i class="nav-icon fa fa-envelope-open"></i>
-                      <p>
-                      
-                          <i class="right fas fa-angle-right"></i>
-                      </p>
-                  </a>
-              </li>
-         
-              
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fa fa-cog"></i>
-                        <p>
-                            
-                            <i class="right fas fa-angle-right"></i>
-                        </p>
-                    </a>
-                </li>
- 
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                      <i class="nav-icon fa fa-cog"></i>
-                      <p>
-                      
-                          <i class="right fas fa-angle-right"></i>
-                      </p>
-                  </a>
-              </li>
-            
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                      <i class="nav-icon fa fa-cog"></i>
-                      <p>
-                        
-                          <i class="right fas fa-angle-right"></i>
-                      </p>
-                  </a>
-              </li>
-         
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                    <i class="nav-icon fa fa-cog"></i>
-                    <p>
-                    
-                        <i class="right fas fa-angle-right"></i>
-                    </p>
-                </a>
-            </li>
-     
+                
               <li class="nav-item">
                 <a href="#" class="nav-link"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
