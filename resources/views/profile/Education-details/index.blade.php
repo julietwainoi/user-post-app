@@ -8,7 +8,7 @@
     @if($educations->isNotEmpty())
         @foreach($educations as $education)
             <div class="mb-3">
-                <p><strong>Degree:</strong> {{ $education->degree }}</p>
+                <p><strong>Degree:</strong> {{ $education->job_title }}</p>
                 <p><strong>Institution:</strong> {{ $education->institution }}</p>
                 <p><strong>Year of Graduation:</strong> {{ $education->year_of_graduation }}</p>
 
