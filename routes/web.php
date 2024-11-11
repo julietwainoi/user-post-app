@@ -7,6 +7,7 @@ use App\Http\Controllers\PersonalDetailController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\WorkExperienceController;
 use App\Http\Controllers\GithubRepositoryController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('github-repositories', GithubRepositoryController::class);
 });
 
-
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profileInformation', [DashboardController::class, 'combinedIndex'])->name('profileInformation.combinedIndex');   
+});
 require __DIR__.'/auth.php';

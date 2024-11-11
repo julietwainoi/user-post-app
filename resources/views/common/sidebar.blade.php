@@ -85,6 +85,15 @@
                 </p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{route('profileInformation.combinedIndex')}}" class="nav-link">
+                <i class="nav-icon fa fa-window-restore"></i>
+                <p>
+                profile Information
+                    <i class="right fas fa-angle-right"></i>
+                </p>
+            </a>
+        </li>
    
                 
               <li class="nav-item">
