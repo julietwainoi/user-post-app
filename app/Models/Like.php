@@ -16,6 +16,12 @@ class Like extends Model
     public function post() {
         return $this->belongsTo(Post::class);
     }
+    // Like Model
+    public function comment()
+   {
+    return $this->belongsTo(Comment::class);
+   }
+
 
     protected $fillable = [
         'user_id'

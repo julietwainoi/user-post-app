@@ -21,6 +21,19 @@ class Comment extends Model
     public function post() {
         return $this->belongsTo(Post::class);
     }
-   
+    public function like() {
+        return $this->hasMany(Like::class);
+    }
+    // Comment Model
+public function parent()
+{
+    return $this->belongsTo(Comment::class, 'parent_id');
+}
+
+public function children()
+{
+    return $this->hasMany(Comment::class, 'parent_id');
+}
+
 
 }
