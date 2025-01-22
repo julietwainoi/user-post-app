@@ -34,24 +34,15 @@ class PostController extends Controller
         return redirect()->route('posts.index');
     }
 
-    /*public function like($id) {
-        $post = Post::findOrFail($id);
+   
 
-        if(!$post->likes()->where('user_id', auth()->id())->exists()) {
-            $post->likes()->create([
-                'user_id' => auth()->id(),
-            ]);
-        }
-
-        return back();
-    }*/
     public function like($id) {
         $post = Post::findOrFail($id);
-
+         $userid = auth()->user()->id;
         // Check if the user has already liked the post
-        if (!$post->likes()->where('user_id', auth()->id())->exists()) {
+        if (!$post->likes()->where('user_id', $userid) ){
             $post->likes()->create([
-                'user_id' => auth()->id(),
+                'user_id' => $userid,
             ]);
         } else {
             // Optionally handle the case where the user has already liked the post
@@ -61,35 +52,7 @@ class PostController extends Controller
         return back()->with('message', 'You liked the post.');
     }
 
-   /* public function comment(Request $request, $id) {
-        $request->validate([
-            'content' => 'required|string',
-        ]);
-
-      //dd($request->content); 
-        $post = Post::findOrFail($id);
-
-
-        //$post->comments()->create([
-            //'user_id' => auth()->id(),
-           // 'user_id' => Auth::id(), // or Auth::id();
-           // 'post_id' => $post->id, // Add post_id explicitly if needed
-          //  'content' => $request->content,
-       // ]);
-    
-
-
-        if ($post->comments()->where('user_id', auth()->id())->exists()) {
-            $post->comments()->create([
-            'user_id' => auth()->id(),
-     'content' => $request->content,
-       ]);
-        }
-
-        return back()->with('message', 'Your comment has been posted.');
-      
-
-    }*/
+ 
     public function comment(Request $request, $id) {
         $request->validate([
             'content' => 'required|string',
