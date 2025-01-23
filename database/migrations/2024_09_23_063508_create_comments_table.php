@@ -13,19 +13,22 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            //$table->unsignedBigInteger('parent_id')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Reference to users table
             $table->foreignId('post_id')->constrained()->onDelete('cascade'); // Reference to posts table
             $table->text('content');
             $table->timestamps();
+
+
+
+            //$table->foreign('parent_id')->references('id')->on('comments')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
         });
 
-        /*Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('post_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Ensure this line is present
-            $table->text('content');
-            $table->timestamps();
-        });*/
+    
+
+       
         
         
     }

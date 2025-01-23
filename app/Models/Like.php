@@ -17,10 +17,10 @@ class Like extends Model
         return $this->belongsTo(Post::class);
     }
     // Like Model
-    public function comment()
-   {
-    return $this->belongsTo(Comment::class);
-   }
+    //public function comment()
+   //{
+    //return $this->belongsTo(Comment::class);
+   //}
 
 
     protected $fillable = [
