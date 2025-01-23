@@ -43,15 +43,15 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $userid = auth()->user()->id;
     
-        // Check if the user has already liked the post
+        
         if (!$post->likes()->where('user_id', $userid)->exists()) {
-            // Create a new like record if it doesn't exist
+            
             $post->likes()->create([
                 'user_id' => $userid,
             ]);
             return back()->with('message', 'You liked the post.');
         } else {
-            // Handle the case where the user has already liked the post
+            
             return back()->with('message', 'You have already liked this post.');
         }
     }
