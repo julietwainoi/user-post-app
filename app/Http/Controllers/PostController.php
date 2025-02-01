@@ -66,7 +66,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
     
         try {
-            // Create a new comment
+            
             $post->comments()->create([
                 'user_id' => auth()->id(),
                 'content' => $request->content,
