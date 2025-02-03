@@ -52,31 +52,36 @@ class PersonalDetailController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(PersonalDetail $personalDetail)
-{
-    //dd($personalDetail); 
-    return view('profile.personal-details.edit', compact('personalDetail'));
-}
+    {
+        //dd($personalDetail); 
+        return view('profile.personal-details.edit', compact('personalDetail'));
+    }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, PersonalDetail $personalDetail)
-{
-    $request->validate([
-        'name' => 'required|string|max:255',
-        'bio' => 'nullable|string',
-        'location' => 'nullable|string|max:255',
-    ]);
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'bio' => 'nullable|string',
+            'location' => 'nullable|string|max:255',
+        ]);
 
-    $personalDetail->update($request->only(['name', 'bio', 'location']));
+        $personalDetail->update($request->only(['name', 'bio', 'location']));
+        // Flash success message to the session
+        session()->flash('status', 'Personal details updated successfully.');
 
-    return redirect()->route('personal-details.index')->with('success', 'Personal details updated successfully.');
-}
+        // Redirect back to the index page
+        return redirect()->route('personal-details.index');
 
-public function destroy(PersonalDetail $personalDetail)
-{
-    $personalDetail->delete();
+        //return redirect()->route('personal-details.index')->with('success', 'Personal details updated successfully.');
+    }
 
-    return redirect()->route('personal-details.index')->with('success', 'Personal details deleted successfully.');
-}
+    public function destroy(PersonalDetail $personalDetail)
+    {
+        $personalDetail->delete();
+
+        return redirect()->route('personal-details.index')->with('success', 'Personal details deleted successfully.');
+    }
 }

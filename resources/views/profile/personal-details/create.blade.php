@@ -6,11 +6,13 @@
     <h2>Add Personal Details</h2>
 
     <!-- Display Success Message -->
-    @if(session('success'))
+   ><!-- @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
-    @endif
+    @endif -->
+    <x-auth-session-status :status="session('status')" />
+
 
     <form action="{{ route('personal-details.store') }}" method="POST">
         @csrf <!-- CSRF Token for form security -->
