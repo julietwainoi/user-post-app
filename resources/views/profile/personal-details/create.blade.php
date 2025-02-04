@@ -6,7 +6,7 @@
     <h2>Add Personal Details</h2>
 
     <!-- Display Success Message -->
-   ><!-- @if(session('success'))
+   <!-- @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
