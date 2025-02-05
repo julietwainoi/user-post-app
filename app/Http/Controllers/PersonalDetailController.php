@@ -12,8 +12,8 @@ class PersonalDetailController extends Controller
      */
     public function index()
     {
-        $personalDetail = auth()->user()->personalDetail;
-        return view('profile.personal-details.index', compact('personalDetail'));
+       $personalDetail = auth()->user()->personalDetail;
+       return view('profile.personal-details.index', compact('personalDetail'));
     }
 
     /**
