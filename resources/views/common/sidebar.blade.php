@@ -51,7 +51,7 @@
                   <a href="{{route('posts.index')}}" class="nav-link">
                       <i class="nav-icon fas fa-tachometer-alt"></i>
                       <p>
-                         POSTS
+                        posts
                           <i class="right fas fa-angle-right"></i>
                       </p>
                   </a>

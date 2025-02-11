@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Combined Details</h1>
+    <h1></h1>
 
     <!-- Education Details Section -->
     <h2>Education Details</h2>
