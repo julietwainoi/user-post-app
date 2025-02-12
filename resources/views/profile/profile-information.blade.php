@@ -77,7 +77,7 @@
         @endforeach
     @else
         <p>No education details found.</p>
-        <a href="{{ route('work-experiences.create') }}" class="btn btn-primary">Add Education Details</a>
+        <a href="{{ route('work-experiences.create') }}" class="btn btn-primary">add Education Details</a>
     @endif
 </div>
 
