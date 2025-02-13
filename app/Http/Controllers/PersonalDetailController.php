@@ -53,7 +53,7 @@ class PersonalDetailController extends Controller
      */
     public function edit(PersonalDetail $personalDetail)
     {
-        //dd($personalDetail); 
+     
         return view('profile.personal-details.edit', compact('personalDetail'));
     }
 
